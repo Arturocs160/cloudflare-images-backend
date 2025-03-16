@@ -1,0 +1,9 @@
+
+# dependencies
+/node_modules
+
+# folder multer
+/uploads
+
+# env files (can opt-in for committing if needed)
+.env*
