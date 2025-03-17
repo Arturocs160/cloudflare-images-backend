@@ -17,7 +17,13 @@ async function deleteImage(request, response) {
     response.send(result.data);
 }
 
+async function getImages(request, response) {
+    const result = await Controller.getImages();
+    response.send(result.data)
+}
+
 router.post('/upload', upload.single('file'), onNewImage)
 router.delete('/:imageId', deleteImage)
+router.get('/', getImages)
 
 module.exports = router

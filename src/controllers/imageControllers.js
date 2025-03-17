@@ -10,9 +10,14 @@ function deleteImages(imageId) {
     return cloudFlare.deleteImage(imageId);
 }
 
+function getImages() {
+    const cloudFlare = CloudFlare.getInstance();
+    return cloudFlare.getImages();
+}
 
 
 module.exports = {
     onNewImages,
-    deleteImages
+    deleteImages,
+    getImages
 }

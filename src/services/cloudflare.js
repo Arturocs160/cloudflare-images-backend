@@ -33,6 +33,10 @@ class CloudFlare extends Client {
         return this.client.delete(`/accounts/${process.env.ID_ACCOUNT}/images/v1/${imageId}`)
     }
 
+    getImages() {
+        return this.client.get(`/accounts/${process.env.ID_ACCOUNT}/images/v1`)
+    }
+
 }
 
 module.exports = CloudFlare
